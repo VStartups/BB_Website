@@ -77,33 +77,44 @@
             text-decoration: none;
         }
 
-        /* Loading spinner styles */
-        .loading-spinner {
-            border: 16px solid #f3f3f3;
-            border-radius: 50%;
-            border-top: 16px solid #3498db;
-            width: 120px;
-            height: 120px;
-            animation: spin 2s linear infinite;
-            margin: 50px auto;
-        }
-
-        @keyframes spin {
-            0% {
-                transform: rotate(0deg);
-            }
-
-            100% {
-                transform: rotate(360deg);
-            }
-        }
-
         /* Ensure the features container is styled */
         #features-container {
             width: 90%;
             max-width: 1200px;
             margin: 20px auto;
             padding: 20px;
+            background: rgba(60, 60, 60, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Download button styling */
+        .download-button {
+            display: inline-block;
+            padding: 15px 30px;
+            font-family: 'space-mono', sans-serif;
+            font-size: 1.2em;
+            font-weight: bold;
+            color: rgba(255, 255, 255, 0.9);
+            text-decoration: none;
+            background: linear-gradient(135deg, rgba(255, 87, 34, 1), rgba(255, 193, 7, 1));
+            border-radius: 25px;
+            box-shadow: 0 4px 10px rgba(255, 87, 34, 0.5);
+            transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+        }
+
+        .download-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 15px rgba(255, 87, 34, 0.7);
+        }
+
+        /* Version info styling */
+        .version-info {
+            font-size: 1.2em;
+            margin: 20px auto;
+            padding: 10px;
             background: rgba(60, 60, 60, 0.9);
             border-radius: 10px;
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
@@ -115,7 +126,6 @@
     <header class="main-header">
         <h1 class="title">The Bimble Programming Language</h1>
     </header>
-
 
     <main class="intro">
         <section class="intro-text">
@@ -167,15 +177,19 @@
         </section>
 
         <section class="sub-text-info last-block">
-            As the natural successor to Python, Bimble builds on the best of what came before while pushing the envelope
-            with its advanced features and performance. Whether you're rewriting legacy code or starting a new project,
-            Bimble gives you the edge you need to stay ahead in an ever-evolving tech landscape.
+            Bimble is poised to be the next evolution in programming, building upon the strengths of Python while
+            introducing groundbreaking features and performance enhancements. It’s not just an upgrade; it's a leap
+            forward into the future of coding. Whether you're migrating from existing codebases or starting fresh,
+            Bimble equips you with cutting-edge tools and capabilities that set new standards in the programming
+            landscape. Get ready to experience a new era where your ideas can soar with unparalleled efficiency and
+            sophistication.
         </section>
     </main>
 
     <div class="version-info">
         <span class="version-number">v0.2</span> <span class="info-text">—</span> <span class="next-version">v0.5</span>
-        <span class="info-text">coming soon!</span>
+        <span class="info-text">coming soon!</span> <span class="info-text">— This version is in early alpha stage
+            and not yet ready for production use.</span>
     </div>
 
     <section class="example-section">
@@ -191,12 +205,11 @@
         <h2 class="example-title">Example Code</h2>
     </section>
 
-    <a href="https://github.com/vstartups/bimble" class="download-link" aria-label="Download Bimble">
+    <a href="https://github.com/vstartups/bimble" class="download-button" aria-label="Download Bimble">
         Download
     </a>
 
-
-    <a class="features-link" href="codes/features/features.html" style="
+    <a class="link" href="codes/features/features.html" style="
     display: inline-block;
     padding: 15px 30px;
     font-family: 'space-mono', sans-serif;
