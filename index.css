@@ -6,96 +6,104 @@
 }
 
 @font-face {
-    font-family: 'space-mono';
+    font-family: 'space-mono-bold';
     src: url("fonts/SpaceMono-Bold.ttf") format('truetype');
     font-weight: bold;
     font-style: normal;
 }
 
 body {
-    background: url('assets/bg.jpg') no-repeat center center fixed;
-    background-size: cover;
-    font-family: 'space-mono', sans-serif;
+    background: linear-gradient(135deg, #493b33, #384a3b, #9d5124);
+    color: #ffffff;
+    font-family: 'space-mono-bold', sans-serif;
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
 }
 
-.main-title {
-    background: linear-gradient(to bottom right, #e41717, #06064b);
-    border-radius: 15px;
-    color: rgb(142, 158, 110);
-    text-align: center;
-    top: 0px;
-    left: 50%;
-    transform: translateX(-50%);
+.main-header {
+    background: rgba(74, 62, 1, 0.345);
     padding: 20px 40px;
-    font-size: 2em;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    z-index: 1000;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(255, 3, 3, 0.493);
+    max-width: 90%;
+    margin: 20px auto;
+    animation: gentleWobble 6s ease-in-out infinite;
 }
 
-.bold-text {
-    margin-top: 170px;
-    text-align: center;
-    color: rgb(199, 210, 143);
-    font-size: 1.25em;
-    line-height: 1.6;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 20px;
-    background: rgba(52, 52, 52, 0.23);
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+.title {
+    font-size: 2.5em;
+    margin: 0;
+    color: #ed9b4f;
 }
-.version-info {
-    font-family: 'Arial', sans-serif;
+
+@keyframes gentleWobble {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(1deg);
+    }
+}
+
+.intro {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 25px auto;
+    position: relative;
+}
+
+.intro-text, .sub-text-info {
+    background: rgba(201, 61, 61, 0.441);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    color: #b8ef76;
     text-align: center;
-    margin-top: 50px;
+    position: relative;
+    animation: float 6s ease-in-out infinite;
+}
+
+.sub-text-info {
+    background: rgba(105, 55, 55, 0.7);
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.version-info {
+    background: #ff7e67;
+    color: #0f2027;
+    padding: 15px 30px;
+    text-align: center;
+    font-size: 1.2em;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    margin-top: 20px;
+    max-width: 90%;
+    margin: 20px auto;
+    animation: gentleWobble 6s ease-in-out infinite;
 }
 
 .version-number {
-    display: inline-block;
-    padding: 12px 24px;
-    background: #007BFF; /* Vibrant blue for the current version */
-    color: white;
-    border-radius: 20px;
-    font-size: 1.5em;
     font-weight: bold;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-    position: relative;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.version-number:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
-}
-
-.next-version {
-    display: inline-block;
-    padding: 12px 24px;
-    background: #FF5733; /* Bright orange for the next version */
-    color: white;
-    border-radius: 20px;
-    font-size: 1.5em;
-    font-weight: bold;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-    margin-left: 15px;
-    position: relative;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.next-version:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
 }
 
 .info-text {
-    display: block;
-    font-size: 1.2em;
-    color: #6c757d; /* Subtle gray for text */
-    margin: 10px 0;
-    font-style: italic;
+    margin-left: 10px;
 }
-
