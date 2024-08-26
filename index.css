@@ -13,8 +13,8 @@
 }
 
 body {
-    background: linear-gradient(135deg, #2c2c2c, #1e1e1e, #3a3a3a);
-    color: #e0e0e0;
+    background: linear-gradient(135deg, #2a2a2a, #1f1f1f, #333333);
+    color: #ffffff;
     font-family: 'space-mono-bold', sans-serif;
     margin: 0;
     padding: 0;
@@ -25,80 +25,46 @@ body {
     text-align: center;
 }
 
-/* Header styles */
 header.main-header {
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(40, 40, 40, 0.8);
     padding: 20px 40px;
-    border-radius: 15px;
+    border-radius: 20px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
     max-width: 90%;
     margin: 20px auto;
-    animation: gentleWobble 6s ease-in-out infinite;
 }
 
 .title {
     font-size: 2.5em;
     margin: 0;
-    color: #f5a623;
+    color: #ed9b4f;
 }
 
-/* Gentle wobble animation */
-@keyframes gentleWobble {
-
-    0%,
-    100% {
-        transform: rotate(0deg);
-    }
-
-    50% {
-        transform: rotate(1deg);
-    }
-}
-
-/* Intro section styles */
 main.intro {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 20px;
-    max-width: 1200px;
+    max-width: 90%;
     margin: 25px auto;
     padding: 0 10px;
 }
 
-/* Intro text styles */
 .intro-text,
 .sub-text-info {
-    background: rgba(40, 40, 40, 0.8);
+    background: rgba(60, 60, 60, 0.9);
     border-radius: 15px;
     padding: 20px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
-    color: #d3d3d3;
-    animation: float 6s ease-in-out infinite;
+    color: #b8ef76;
 }
 
-/* Sub text styles */
 .sub-text-info {
     background: rgba(50, 50, 50, 0.9);
-    animation: float 3s ease-in-out infinite;
 }
 
-/* Float animation */
-@keyframes float {
-
-    0%,
-    100% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(-10px);
-    }
-}
-
-/* Version info styles */
 .version-info {
-    background: #d35400;
-    color: #0d0d0d;
+    background: #444;
+    color: #ffffff;
     padding: 15px 30px;
     text-align: center;
     font-size: 1.2em;
@@ -106,76 +72,63 @@ main.intro {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
     margin: 20px auto;
     max-width: 90%;
-    animation: gentleWobble 6s ease-in-out infinite;
 }
 
-/* Version number styles */
 .version-number {
     font-weight: bold;
 }
 
-/* Info text styles */
 .info-text {
     margin-left: 10px;
 }
 
-/* Example section styles */
 .example-section {
-    margin: 20px;
+    margin: 20px auto;
     max-width: 90%;
+    text-align: center; /* Center content in the example section */
 }
 
-/* Example title styles */
 .example-title {
     font-family: 'space-mono';
     font-size: 20px;
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(200, 200, 200, 0.9);
     text-align: center;
 }
 
-/* Code block styles */
 .code-block {
-    background: #101820;
-    color: #e0e0e0;
+    background: #1e1e1e;
+    color: #f8f8f2;
     border-radius: 8px;
     padding: 20px;
     overflow-x: auto;
     font-family: monospace;
     margin: 20px auto;
-    font-size: 25px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    font-size: 18px;
 }
 
-/* Code block pre styles */
 .code-block pre {
     margin: 0;
-    line-height: 1.8;
+    line-height: 1.6;
 }
 
-/* Syntax highlighting */
 .keyword {
-    color: #f39c12;
-    /* Gold for keywords */
+    color: #e70000;
 }
 
 .comment {
-    color: #7f8c8d;
-    /* Gray for comments */
+    color: #154bef;
 }
 
 .string {
-    color: #2ecc71;
-    /* Green for strings */
+    color: #9bb16f;
 }
 
 .variable {
-    color: #3498db;
-    /* Blue for variables */
+    color: #409c82;
 }
 
 .number {
-    color: #e74c3c;
-    /* Red for numbers */
+    color: #01ff91;
 }
 
 /* Link styles */
@@ -185,7 +138,6 @@ main.intro {
     font-family: 'space-mono', monospace;
     text-decoration: none;
     position: relative;
-    transition: color 0.3s ease, text-shadow 0.3s ease;
     font-size: 40px;
 }
 
@@ -213,49 +165,24 @@ main.intro {
     transform: scaleX(1);
 }
 
-/* Pulsating effect for emphasis */
-.link.pulsate {
-    animation: pulsate 1.5s infinite;
-}
-
-/* Pulsating animation */
-@keyframes pulsate {
-    0% {
-        text-shadow: 0 0 8px #ff8c00, 0 0 16px #ff8c00, 0 0 24px #ff8c00;
-    }
-
-    50% {
-        text-shadow: 0 0 16px #ff8c00, 0 0 32px #ff8c00, 0 0 48px #ff8c00;
-    }
-
-    100% {
-        text-shadow: 0 0 8px #ff8c00, 0 0 16px #ff8c00, 0 0 24px #ff8c00;
-    }
-}
-
-/* More info styles */
 .moreinfo {
     font-family: 'space-mono-bold', monospace;
     font-size: 40px;
-    color: #a89f91;
+    color: rgb(164, 147, 125);
+    text-align: center;
+    display: block;
+    margin: 20px auto;
 }
 
-/* More info pulsating effect */
+/* Remove pulsate animation for performance improvement on mobile */
+.link.pulsate,
 .moreinfo.pulsatemi {
-    animation: pulsatemi 1s infinite;
+    animation: none;
 }
 
-/* Unique pulsating animation */
-@keyframes pulsatemi {
-    0% {
-        text-shadow: 0 0 8px #6b5b95, 0 0 16px #8e44ad, 0 0 24px #9b59b6;
-    }
-
-    50% {
-        text-shadow: 0 0 20px #f39c12, 0 0 40px #f39c12, 0 0 60px #f39c12;
-    }
-
-    100% {
-        text-shadow: 0 0 12px #f39c12, 0 0 24px #e67e22, 0 0 36px #d35400;
-    }
+/* Center the last block in the intro section */
+.sub-text-info.last-block {
+    text-align: center;
+    max-width: 100%;
+    margin: 0 auto;
 }
