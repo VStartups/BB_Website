@@ -25,7 +25,6 @@ body {
     border-radius: 15px;
     color: rgb(142, 158, 110);
     text-align: center;
-    position: fixed;
     top: 0px;
     left: 50%;
     transform: translateX(-50%);
