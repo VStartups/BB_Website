@@ -1,0 +1,244 @@
+@font-face {
+    font-family: 'space-mono';
+    src: url('../../fonts/SpaceMono-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'space-mono-bold';
+    src: url('../../fonts/SpaceMono-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+body {
+    background: linear-gradient(115deg, rgba(45, 45, 45, 1), rgba(25, 25, 25, 0.8)); /* Softer gradient for a whimsical feel */
+    font-family: 'space-mono', sans-serif;
+    color: rgba(255, 255, 255, 0.9);
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.features {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px auto;
+    padding: 20px;
+    max-width: 80%;
+    background: rgba(35, 35, 35, 0.9); /* Slightly lighter dark background */
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(220, 160, 100, 0.5); /* Warm, soft shadow */
+}
+
+.features-title {
+    font-size: 3em;
+    font-family: 'space-mono-bold', sans-serif;
+    color: rgba(255, 230, 50, 0.9); /* Soft, warm yellow */
+    background: linear-gradient(135deg, rgba(40, 40, 40, 0.9), rgba(60, 60, 60, 0.9)); /* Gentle gradient */
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(220, 160, 100, 0.4); /* Warm shadow */
+    transition: transform 0.3s ease, color 0.3s ease;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+}
+
+.features-title:hover {
+    transform: scale(1.05);
+    color: rgba(255, 255, 255, 0.9); /* Light white on hover */
+}
+
+.feature-item {
+    font-size: 20px;
+    width: 80%;
+    font-family: 'space-mono', sans-serif;
+    color: rgba(200, 240, 120, 0.9); /* Soft pastel green */
+    background-color: rgba(20, 20, 20, 0.9); /* Darker background with less transparency */
+    border-radius: 10px;
+    padding: 20px;
+    margin: 15px 0;
+    box-shadow: 0 4px 8px rgba(220, 160, 100, 0.3); /* Warm shadow */
+    text-align: left; /* Align text to the left for better readability */
+}
+
+.feature-main-title {
+    font-size: 2em;
+    font-family: 'space-mono-bold', sans-serif;
+    color: rgba(255, 230, 50, 0.9); /* Soft, warm yellow */
+    margin-bottom: 15px;
+}
+
+.feature-subtitle {
+    font-size: 1.5em;
+    font-family: 'space-mono-bold', sans-serif;
+    color: rgba(180, 80, 180, 0.8); /* Soft pastel purple */
+    margin-top: 20px;
+}
+
+.code-sample {
+    font-family: monospace;
+    color: rgba(200, 240, 120, 0.9); /* Soft pastel green text */
+    background-color: rgba(40, 40, 40, 0.9); /* Slightly lighter dark background */
+    padding: 10px;
+    border-radius: 5px;
+    display: inline-block;
+    margin: 10px 0;
+}
+
+.feature-section {
+    margin-bottom: 20px;
+}
+
+/* Additional whimsical styling */
+header.main-header {
+    background: rgba(30, 30, 30, 0.8);
+    padding: 20px 40px;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(220, 160, 100, 0.5); /* Warm shadow */
+    max-width: 90%;
+    margin: 20px auto;
+}
+
+.title {
+    font-size: 2.5em;
+    margin: 0;
+    color: rgba(255, 230, 50, 0.9); /* Soft, warm yellow */
+    font-family: 'space-mono-bold';
+}
+
+main.intro {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 50%;
+    margin: 25px auto;
+    padding: 0 10px;
+}
+
+.intro-text,
+.sub-text-info {
+    background: rgba(30, 30, 30, 0.9); /* Slightly lighter dark background */
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 8px 16px rgba(220, 160, 100, 0.5); /* Warm shadow */
+    color: rgba(200, 240, 120, 0.9); /* Soft pastel green text */
+}
+
+.sub-text-info {
+    background: rgba(25, 25, 25, 0.9); /* Slightly lighter dark background */
+}
+
+.version-info {
+    background: rgba(50, 50, 50, 0.9); /* Slightly lighter dark background */
+    color: rgba(255, 255, 255, 0.9); /* Light text */
+    padding: 15px 30px;
+    text-align: center;
+    font-size: 1.2em;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(220, 160, 100, 0.5); /* Warm shadow */
+    margin: 20px auto;
+    max-width: 90%;
+}
+
+.version-number {
+    font-weight: bold;
+}
+
+.info-text {
+    margin-left: 10px;
+}
+
+.example-section {
+    margin: 20px auto;
+    max-width: 90%;
+    text-align: center;
+}
+
+.example-title {
+    font-family: 'space-mono', monospace; /* Retaining your chosen font */
+    font-size: 20px;
+    color: rgba(200, 200, 200, 0.9); /* Light gray text */
+}
+
+.code-block {
+    background: rgba(40, 40, 40, 0.9); /* Slightly lighter dark background */
+    color: rgba(248, 248, 242, 0.9); /* Light text */
+    border-radius: 8px;
+    padding: 20px;
+    overflow-x: auto;
+    font-family: monospace;
+    margin: 20px auto;
+    font-size: 18px;
+}
+
+.code-block pre {
+    margin: 0;
+    line-height: 1.6;
+}
+
+.keyword {
+    color: #ff7f50; /* Coral for keywords */
+}
+
+.comment {
+    color: #87ceeb; /* Sky blue for comments */
+}
+
+.string {
+    color: #98fb98; /* Pale green for strings */
+}
+
+.variable {
+    color: #20b2aa; /* Light sea green for variables */
+}
+
+.number {
+    color: #ff6347; /* Tomato red for numbers */
+}
+
+/* Link styles */
+.link {
+    color: rgba(255, 230, 50, 0.9); /* Soft, warm yellow */
+    font-weight: bold;
+    font-family: 'space-mono', monospace; /* Retaining your chosen font */
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.link:hover {
+    color: rgba(255, 255, 255, 0.9); /* Light white on hover */
+    text-shadow: 0 0 10px rgba(255, 230, 50, 0.8), 0 0 20px rgba(255, 230, 50, 0.8), 0 0 30px rgba(255, 230, 50, 0.8); /* Warm yellow glow */
+}
+
+.moreinfo {
+    font-family: 'space-mono', monospace; /* Retaining your chosen font */
+    font-size: 20px;
+    color: rgba(174, 153, 120, 0.9); /* Soft beige */
+    text-align: center;
+    display: block;
+    margin: 20px auto;
+}
+
+.sub-text-info.last-block {
+    text-align: center;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+/* Media Queries */
+@media (max-width: 600px) {
+    .intro-text, .sub-text-info, .example-section {
+        font-size: 16px;
+        padding: 15px;
+    }
+
+    .title {
+        font-size: 2em;
+    }
+
+    .code-block {
+        font-size: 16px;
+        padding: 10px;
+    }
+}
