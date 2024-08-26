@@ -1,4 +1,16 @@
-/* General styles */
+@font-face {
+    font-family: 'space-mono';
+    src: url("fonts/SpaceMono-Regular.ttf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'space-mono';
+    src: url("fonts/SpaceMono-Bold.ttf") format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
 
 body {
     background: url('assets/bg.jpg') no-repeat center center fixed;
@@ -14,19 +26,17 @@ body {
     color: rgb(142, 158, 110);
     text-align: center;
     position: fixed;
-    top: 20px;
+    top: 0px;
     left: 50%;
     transform: translateX(-50%);
     padding: 20px 40px;
     font-size: 2em;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     z-index: 1000;
-    max-width: 90%;
-    /* Adjust width for smaller screens */
 }
 
 .bold-text {
-    margin-top: 100px; /* Adjust margin to account for the fixed header */
+    margin-top: 170px;
     text-align: center;
     color: rgb(199, 210, 143);
     font-size: 1.25em;
@@ -35,13 +45,10 @@ body {
     margin-left: auto;
     margin-right: auto;
     padding: 20px;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(52, 52, 52, 0.23);
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
-
-/* Version info styles */
-
 .version-info {
     font-family: 'Arial', sans-serif;
     text-align: center;
@@ -93,26 +100,3 @@ body {
     font-style: italic;
 }
 
-/* Mobile responsiveness */
-
-@media (max-width: 768px) {
-    .main-title {
-        font-size: 1.5em; /* Smaller font size for mobile */
-        padding: 15px 30px; /* Adjust padding */
-    }
-
-    .bold-text {
-        margin-top: 80px; /* Adjust margin to ensure no overlap */
-        font-size: 1.1em; /* Slightly smaller font size */
-        padding: 15px; /* Adjust padding */
-    }
-
-    .version-info {
-        font-size: 1.2em; /* Adjust font size for better readability */
-    }
-
-    .version-number, .next-version {
-        font-size: 1.2em; /* Adjust font size for better readability */
-        padding: 10px 20px; /* Adjust padding */
-    }
-}
