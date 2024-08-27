@@ -1,72 +1,69 @@
-/* Global Styles */
 body {
-    background: linear-gradient(80deg, #3a3a3a, #000, #4d4d1a);
-    font-family: 'Orbitron', sans-serif;
-    color: #f0f0f0;
     margin: 0;
-    padding: 0;
+    height: 100vh;
     display: flex;
-    justify-content: center; /* Center the container horizontally */
-    align-items: flex-start; /* Align items at the top */
-    height: 100vh; /* Take up full viewport height */
-    position: relative;
-}
-
-/* Container */
-.container {
-    text-align: center; /* Center all text inside the container */
-    /*width: 100%; /* Full width to align center elements */
-}
-
-/* Top Bar */
-.top-bar {
-    position: sticky; /* Sticky positioning to keep it at the top */
-    top: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center the home button and title horizontally */
-    padding-top: 20px;
-    padding-bottom: 10px;
-    background: rgba(0, 0, 0, 0.8); /* Slight background for contrast */
-    z-index: 1000; /* Ensure it stays on top */
-}
-
-/* Home Button */
-.homebtn {
-    background: linear-gradient(135deg, rgba(245, 222, 179, 0.5), rgba(224, 198, 161, 0.6));
-    color: #3e2c1e;
-    text-align: center;
-    font-size: 2em;
-    padding: 1em;
-    border-radius: 50%;
-    border: 0.15em solid rgba(234, 232, 230, 0.6);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-    cursor: pointer;
-    transition: background 0.3s, box-shadow 0.3s, transform 0.3s;
-    width: 70px;
-    height: 70px;
-    display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    background: linear-gradient(40deg, rgba(60, 66, 24, 1) 0%, rgba(75, 3, 27, 1) 35%, rgba(9, 66, 78, 1) 100%);
+    background-size: 200% 200%;
+    animation: waterFlow 5s linear infinite;
 }
 
-.homebtn:hover {
-    background: linear-gradient(135deg, rgba(224, 198, 161, 0.8), rgba(245, 222, 179, 0.6));
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
-    transform: scale(1.03); /* Slightly enlarge the button on hover */
+@keyframes waterFlow {
+    0% {
+        background-position: 0% 0%;
+    }
+
+    25% {
+        background-position: 100% 0%;
+    }
+
+    50% {
+        background-position: 100% 100%;
+    }
+
+    75% {
+        background-position: 0% 100%;
+    }
+
+    100% {
+        background-position: 0% 0%;
+    }
 }
 
-/* Features Title */
-.f_title {
-    background-color: rgba(167, 127, 99, 0.9);
-    display: inline-block;
-    border-radius: 0.8em;
-    padding: 0.7em 1.5em;
-    border: 0.12em solid #f5deb3;
-    font-size: 2.5em;
-    color: #3e2c1e;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    margin-top: 15px; /* Space between the button and title */
-    transition: background-color 0.3s, box-shadow 0.3s;
-    max-width: 100%;
+@keyframes glow {
+    0% {
+        filter: blur(0em);
+        opacity: 0.5;
+    }
+
+    50% {
+        filter: blur(0.05em);
+        opacity: 0.9;
+    }
+
+    100% {
+        filter: blur(0em);
+        opacity: 0.5;
+    }
 }
+
+
+.homebtn {
+    position: absolute;
+    bottom: 20px; /* Distance from bottom */
+    right: 20px; /* Distance from right */
+    padding: 10px 20px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #ff5733;
+    cursor: pointer;
+    text-align: center;
+}
+
+.glow {
+    animation: glow 2s infinite;
+}
+

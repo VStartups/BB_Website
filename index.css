@@ -26,129 +26,285 @@
 body {
     margin: 0;
     height: 100vh;
-    display: flex;
+    display: inline-block;
+    margin-left: 9.5em;
     justify-content: center;
-    align-items: center; /* Center vertically */
-    overflow: hidden;
-    background: linear-gradient(135deg, #2e1b1a, #5e2a2a, #f8c94d);
+    align-items: center;
+    background: linear-gradient(40deg, rgba(60, 66, 24, 1) 0%, rgba(75, 3, 27, 1) 35%, rgba(9, 66, 78, 1) 100%);
     background-size: 200% 200%;
-    animation: waterFlow 20s linear infinite;
+    animation: waterFlow 5s linear infinite;
+    /* Prevent scrollbar from appearing */
 }
 
 .container {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center horizontally */
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-    border-radius: 15px; /* Rounded corners */
-    padding: 20px; /* Padding around the content */
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6); /* Shadow for depth */
-    max-width: 80%; /* Limit container width */
+    align-items: center;
+    background-color: rgba(110, 121, 17, 0.185);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+    max-width: 90%;
+    /* Adjusted to fit smaller screens */
+    position: relative;
+    /* Ensure it's positioned relative to the body */
 }
 
 .title-container {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center horizontally */
-    gap: 10px; /* Space between title and version warning */
+    align-items: center;
+    gap: 10px;
 }
 
 @keyframes waterFlow {
-    0% { background-position: 0% 0%; }
-    25% { background-position: 100% 0%; }
-    50% { background-position: 100% 100%; }
-    75% { background-position: 0% 100%; }
-    100% { background-position: 0% 0%; }
+    0% {
+        background-position: 0% 0%;
+    }
+
+    25% {
+        background-position: 100% 0%;
+    }
+
+    50% {
+        background-position: 100% 100%;
+    }
+
+    75% {
+        background-position: 0% 100%;
+    }
+
+    100% {
+        background-position: 0% 0%;
+    }
 }
 
 @keyframes glow {
-    0% { filter: blur(0px); opacity: 0.5; }
-    100% { filter: blur(6px); opacity: 0.9; }
+    0% {
+        filter: blur(0em);
+        opacity: 0.5;
+    }
+
+    50% {
+        filter: blur(0.05em);
+        opacity: 0.9;
+    }
+
+    100% {
+        filter: blur(0em);
+        opacity: 0.5;
+    }
 }
 
 .maintitle {
-    background-color: rgba(166, 142, 113, 0.8);
+    background-color: rgba(31, 29, 27, 0.301);
     color: #ffffff;
-    padding: 20px; /* Increased padding */
-    border-radius: 15px; /* Rounded corners */
+    padding: 20px;
+    border-radius: 15px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
     font-family: 'kodo-bold', sans-serif;
     font-size: 2.5em;
     text-align: center;
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
-    max-width: 100%; /* Ensure it doesn't overflow container */
+    text-shadow: 0 0 10px rgba(70, 22, 134, 0.26);
+    max-width: 100%;
 }
 
 .version-warning {
-    background-color: rgba(180, 222, 122, 0.358); /* Slightly transparent red background */
-    color: #e1ff00;
-    padding: 3px;
-    border-radius: 10px; /* Rounded corners */
-    border: 6px solid #882b0a; /* Red border */
-    font-family: 'kodo-bold'; /* Apply Kodo font */
-    font-size: 0.6em; /* Smaller font size */
+    background-color: rgba(255, 0, 0, 0.358);
+    color: #eeff00;
+    padding: 5.5px;
+    border-radius: 4px;
+    border: 6px solid #882b0a;
+    font-family: 'kodo-bold';
+    font-size: 0.6em;
     text-align: center;
     text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
-    max-width: 100%; /* Ensure it doesn't overflow container */
+    max-width: 100%;
 }
 
 .info {
-    background-color: rgba(166, 142, 113, 0.8);
+    background-color: rgba(3, 48, 68, 0.37);
     color: #ffffff;
     padding: 15px;
     border-radius: 15px;
-    border: 5px solid #00ff8c; /* Border color and thickness */
+    border: 5px solid #00ff8c;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-    font-family: 'kodo-reg'; /* Apply Kodo font */
-    font-size: 1.5em; /* Slightly smaller font size */
+    font-family: 'kodo-reg';
+    font-size: 1.5em;
     text-align: center;
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
-    max-width: 100%; /* Ensure it doesn't overflow container */
+    max-width: 100%;
 }
 
 .info-block {
     display: flex;
-    align-items: center; /* Align items vertically */
-    background-color: rgba(166, 142, 113, 0.8);
+    align-items: center;
+    background-color: rgba(5, 27, 22, 0.8);
     color: #ffffff;
     padding: 15px;
     border-radius: 15px;
-    border: 5px solid #00ff8c; /* Border color and thickness */
+    border: 5px solid #00ff8c;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-    font-family: 'kodo-reg'; /* Apply Kodo font */
+    font-family: 'kodo-reg';
     font-size: 1.5em;
     text-align: left;
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
-    margin-top: 10px; /* Space between info blocks */
+    margin-top: 3px;
 }
 
 .info-block i {
-    font-size: 2em; /* Size of the icon */
-    color: #00ff8c; /* Icon color */
-    margin-right: 15px; /* Space between icon and text */
+    font-size: 2em;
+    color: #ff8800;
+    margin-right: 15px;
 }
 
 .features-button {
     display: inline-block;
-    background-color: #778231; /* Button color */
-    color: #ffffff; /* Text color */
-    padding: 10px 20px; /* Padding inside the button */
-    border-radius: 5px; /* Rounded corners */
-    text-decoration: none; /* Remove underline */
-    font-family: 'kodo-bold', sans-serif; /* Font style */
-    font-size: 1.2em; /* Font size */
+    background-color: #cae709;
+    color: #5f0808;
+    padding: 10px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-family: 'kodo-bold', sans-serif;
+    font-size: 1.5em;
     text-align: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Shadow for depth */
-    transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
-    margin-top: 20px; /* Space above the button */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    transition: background-color 0.3s, transform 0.3s;
+    margin-top: 20px;
 }
 
 .features-button:hover {
-    background-color: #009e6c; /* Darker button color on hover */
-    transform: scale(1.05); /* Slight zoom effect on hover */
+    background-color: #009e6c;
+    transform: scale(1.05);
 }
 
 .features-button:active {
-    background-color: #007a52; /* Even darker color on click */
-    transform: scale(0.95); /* Slightly shrink on click */
+    background-color: #007a52;
+    transform: scale(0.95);
+}
+
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-0.05em);
+    }
+
+    50% {
+        transform: translateX(0.05em);
+    }
+
+    75% {
+        transform: translateX(-0.05em);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.clickable-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.clickable-item {
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.3);
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-family: 'kodo-bold', sans-serif;
+    font-size: 1.5em;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    transition: background-color 0.3s, transform 0.3s;
+    animation: shake 0.8s ease-in-out infinite;
+}
+
+.clickable-item:hover {
+    background-color: #009e6c;
+    transform: scale(1.1);
+}
+
+.clickable-item:active {
+    background-color: #007a52;
+    transform: scale(0.95);
+}
+
+.sidebar {
+    position: fixed;
+    top: 20px;
+    right: -400px;
+    /* Adjusted for visibility */
+    width: 200px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #ffffff;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    transition: right 0.3s ease;
+}
+
+.sidebar.open {
+    right: 20px;
+    /* Slide in position */
+}
+
+.sidebar h2 {
+    font-family: 'kodo-bold', sans-serif;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.sidebar .clickable-item {
+    display: block;
+    background-color: #cae709;
+    color: #5f0808;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-family: 'kodo-bold', sans-serif;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.sidebar .clickable-item:hover {
+    background-color: #009e6c;
+    transform: scale(1.05);
+}
+
+.sidebar .clickable-item:active {
+    background-color: #007a52;
+    transform: scale(0.95);
+}
+
+.toggle-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #ffffff;
+    padding: 10px 15px;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    font-size: 1.5em;
+    z-index: 1004;
+    /* Above sidebar */
+    transition: background-color 0.3s;
+}
+
+.toggle-btn:hover {
+    background-color: rgba(0, 0, 0, 0.6);
 }

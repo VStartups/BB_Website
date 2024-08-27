@@ -16,7 +16,7 @@
                 The Bimble Programming Language<br>
                 <strong>
                     <span class="version-warning">
-                        <i class="fas fa-exclamation-triangle"></i> <!-- Warning icon -->
+                        <i class="fas fa-exclamation-triangle"></i>
                         Version 0.2 | V0.5 On The Way...
                     </span>
                 </strong>
@@ -24,16 +24,37 @@
         </div>
         <div class="info-block">
             <i class="fas fa-cogs"></i>
-            <p class="info">A programming language made to be as easy as Python while keeping <strong>BORING</strong>
-                stuff like error handling to be automated or defined uniquely</p>
+            <p class="info">Welcome to Bimble, the next-generation programming language designed to outshine Python in speed and reliability. Bimble offers a modern approach to coding with high-level constructs and static typing that ensures your code is not only efficient but also robust against runtime errors.</p>
         </div>
         <div class="info-block">
             <i class="fas fa-cogs"></i>
-            <p class="info">A general-purpose statically typed no-runtime-error focused programming language with speed
-                and efficiency in mind</p>
+            <p class="info">What sets Bimble apart is its innovative error handling mechanism. Unlike traditional methods, Bimble integrates unique strategies to predict and manage errors before they disrupt your workflow. This allows for smoother development and more reliable applications.</p>
         </div>
-        <a href="codes/features/features.html" class="features-button">Explore Features</a> <!-- Button -->
+        <div class="info-block">
+            <i class="fas fa-cogs"></i>
+            <p class="info">Designed with modern developers in mind, Bimble supports rapid development with its easy-to-use syntax while delivering the performance you need. Whether you're building complex systems or quick prototypes, Bimble adapts to your needs with powerful features and flexibility.</p>
+        </div>
+        <div class="info-block">
+            <i class="fas fa-cogs"></i>
+            <p class="info">Stay tuned as we roll out more features that will redefine programming. With each update, Bimble aims to bring more tools and enhancements to streamline your development process and push the boundaries of what you can achieve with code.</p>
+        </div>
+        <div class="sidebar" id="sidebar">
+            <h2>Explore</h2>
+            <a href="codes/features/features.html" class="clickable-item">Features</a>
+            <!-- Add more clickable items here -->
+        </div>
+        <div class="toggle-btn" id="toggle-btn">
+            <i class="fas fa-bars"></i>
+        </div>
     </div>
+    <script>
+        const sidebar = document.getElementById('sidebar');
+        const toggleBtn = document.getElementById('toggle-btn');
+
+        toggleBtn.addEventListener('click', () => {
+            sidebar.classList.toggle('open');
+        });
+    </script>
 </body>
 
 </html>
