@@ -105,7 +105,6 @@ body {
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
     max-width: 100%; /* Ensure it doesn't overflow container */
 }
-/* Add this to your existing CSS file */
 
 .info-block {
     display: flex;
@@ -128,7 +127,6 @@ body {
     color: #00ff8c; /* Icon color */
     margin-right: 15px; /* Space between icon and text */
 }
-/* Add this to your existing CSS file */
 
 .features-button {
     display: inline-block;
