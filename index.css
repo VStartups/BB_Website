@@ -1,219 +1,156 @@
 @font-face {
-    font-family: 'space-mono';
-    src: url('fonts/SpaceMono-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+    font-family: 'tw-reg';
+    src: url("fonts/TitilliumWeb-Regular.ttf") format("truetype");
 }
 
 @font-face {
-    font-family: 'space-mono-bold';
-    src: url('fonts/SpaceMono-Bold.ttf') format('truetype');
-    font-weight: bold;
-    font-style: normal;
+    font-family: 'tw-bold';
+    src: url("fonts/TitilliumWeb-Bold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: 'tw-italic';
+    src: url("fonts/TitilliumWeb-Italic.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: 'kodo-reg';
+    src: url('fonts/KodeMono-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'kodo-bold';
+    src: url('fonts/KodeMono-Bold.ttf');
 }
 
 body {
-    background: linear-gradient(135deg, rgba(50, 50, 50, 1), rgba(30, 30, 30, 0.9));
-    color: rgba(255, 255, 255, 0.9);
-    font-family: 'space-mono', sans-serif;
     margin: 0;
-    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center vertically */
+    overflow: hidden;
+    background: linear-gradient(135deg, #2e1b1a, #5e2a2a, #f8c94d);
+    background-size: 200% 200%;
+    animation: waterFlow 20s linear infinite;
+}
+
+.container {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
-    align-items: center;
-    text-align: center;
+    align-items: center; /* Center horizontally */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    border-radius: 15px; /* Rounded corners */
+    padding: 20px; /* Padding around the content */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6); /* Shadow for depth */
+    max-width: 80%; /* Limit container width */
 }
 
-header.main-header {
-    background: rgba(30, 30, 30, 0.9);
-    padding: 20px 40px;
-    border-radius: 20px;
-    box-shadow: 0 8px 16px rgba(0, 150, 255, 0.4);
-    /* Soft blue shadow */
-    max-width: 90%;
-    margin: 20px auto;
-}
-
-.title {
-    font-size: 2.5em;
-    margin: 0;
-    color: rgba(255, 200, 100, 0.9);
-    /* Soft yellow */
-    font-family: 'space-mono-bold';
-}
-
-main.intro {
+.title-container {
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    max-width: 50%;
-    margin: 25px auto;
-    padding: 0 10px;
+    align-items: center; /* Center horizontally */
+    gap: 10px; /* Space between title and version warning */
 }
 
-.intro-text,
-.sub-text-info {
-    background: rgba(40, 40, 40, 0.8);
-    /* Darker background with transparency */
-    border-radius: 15px;
-    padding: 20px;
-    box-shadow: 0 8px 16px rgba(0, 150, 255, 0.4);
-    /* Soft blue shadow */
-    color: rgba(200, 230, 150, 0.9);
-    /* Soft greenish-yellow text */
+@keyframes waterFlow {
+    0% { background-position: 0% 0%; }
+    25% { background-position: 100% 0%; }
+    50% { background-position: 100% 100%; }
+    75% { background-position: 0% 100%; }
+    100% { background-position: 0% 0%; }
 }
 
-.sub-text-info {
-    background: rgba(30, 30, 30, 0.9);
-    /* Darker background */
+@keyframes glow {
+    0% { filter: blur(0px); opacity: 0.5; }
+    100% { filter: blur(6px); opacity: 0.9; }
 }
 
-.version-info {
-    background: rgba(50, 50, 50, 0.8);
-    /* Darker background with slight transparency */
-    color: rgba(255, 255, 255, 0.9);
-    /* Light text */
-    padding: 15px 30px;
-    text-align: center;
-    font-size: 1.2em;
-    border-radius: 20px;
-    box-shadow: 0 8px 16px rgba(0, 150, 255, 0.4);
-    /* Soft blue shadow */
-    margin: 20px auto;
-    max-width: 90%;
-}
-
-.version-number {
-    font-weight: bold;
-}
-
-.info-text {
-    margin-left: 10px;
-}
-
-.example-section {
-    margin: 20px auto;
-    max-width: 90%;
-    text-align: center;
-}
-
-.example-title {
-    font-family: 'space-mono', monospace;
-    /* Retaining your chosen font */
-    font-size: 20px;
-    color: rgba(200, 200, 200, 0.9);
-    /* Light gray text */
-}
-
-.code-block {
-    background: rgba(40, 40, 40, 0.8);
-    /* Darker background */
-    color: rgba(255, 255, 255, 0.9);
-    /* Light text */
-    border-radius: 8px;
-    padding: 20px;
-    overflow-x: auto;
-    font-family: monospace;
-    margin: 20px auto;
-    font-size: 18px;
-}
-
-.code-block pre {
-    margin: 0;
-    line-height: 1.6;
-}
-
-.keyword {
-    color: #ff6347;
-    /* Tomato red */
-}
-
-.comment {
-    color: #1e90ff;
-    /* Dodger blue */
-}
-
-.string {
-    color: #9acd32;
-    /* Yellow green */
-}
-
-.variable {
-    color: #00fa9a;
-    /* Medium spring green */
-}
-
-.number {
-    color: #ff4500;
-    /* Orange red */
-}
-
-/* Link styles */
-.link {
-    color: rgba(255, 215, 0, 0.9);
-    /* Gold */
-    font-weight: bold;
-    font-family: 'space-mono', monospace;
-    /* Retaining your chosen font */
-    text-decoration: none;
-    font-size: 20px;
-}
-
-.link:hover {
-    color: rgba(255, 255, 255, 0.9);
-    /* White on hover */
-    text-shadow: 0 0 5px rgba(255, 215, 0, 0.8), 0 0 10px rgba(255, 215, 0, 0.8);
-    /* Soft gold glow */
-}
-
-.moreinfo {
-    font-family: 'space-mono', monospace;
-    /* Retaining your chosen font */
-    font-size: 20px;
-    color: rgba(184, 134, 11, 0.9);
-    /* Dark golden rod */
-    text-align: center;
-    display: block;
-    margin: 20px auto;
-}
-
-.sub-text-info.last-block {
-    text-align: center;
-    max-width: 100%;
-    margin: 0 auto;
-}
-
-/* Floating download button styles */
-.download-link {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: rgba(255, 140, 0, 0.9);
-    /* Dark orange */
+.maintitle {
+    background-color: rgba(166, 142, 113, 0.8);
     color: #ffffff;
-    font-family: 'Arial', sans-serif;
-    font-size: 18px;
-    font-weight: bold;
-    padding: 15px 30px;
-    border-radius: 50px;
-    box-shadow: 0 8px 16px rgba(0, 150, 255, 0.4);
-    /* Soft blue shadow */
+    padding: 20px; /* Increased padding */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    font-family: 'kodo-bold', sans-serif;
+    font-size: 2.5em;
     text-align: center;
-    text-decoration: none;
-    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+    max-width: 100%; /* Ensure it doesn't overflow container */
 }
 
-.download-link:hover {
-    background-color: rgba(255, 165, 0, 0.9);
-    /* Slightly lighter dark orange */
-    box-shadow: 0 12px 24px rgba(0, 150, 255, 0.5);
-    /* Soft blue shadow on hover */
-    transform: scale(1.05);
-    /* Slightly enlarge the button */
+.version-warning {
+    background-color: rgba(180, 222, 122, 0.358); /* Slightly transparent red background */
+    color: #e1ff00;
+    padding: 3px;
+    border-radius: 10px; /* Rounded corners */
+    border: 6px solid #882b0a; /* Red border */
+    font-family: 'kodo-bold'; /* Apply Kodo font */
+    font-size: 0.6em; /* Smaller font size */
+    text-align: center;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+    max-width: 100%; /* Ensure it doesn't overflow container */
 }
 
-.download-link:focus {
-    outline: 3px solid rgba(255, 215, 0, 0.8);
-    /* Soft gold focus outline */
+.info {
+    background-color: rgba(166, 142, 113, 0.8);
+    color: #ffffff;
+    padding: 15px;
+    border-radius: 15px;
+    border: 5px solid #00ff8c; /* Border color and thickness */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    font-family: 'kodo-reg'; /* Apply Kodo font */
+    font-size: 1.5em; /* Slightly smaller font size */
+    text-align: center;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+    max-width: 100%; /* Ensure it doesn't overflow container */
+}
+/* Add this to your existing CSS file */
+
+.info-block {
+    display: flex;
+    align-items: center; /* Align items vertically */
+    background-color: rgba(166, 142, 113, 0.8);
+    color: #ffffff;
+    padding: 15px;
+    border-radius: 15px;
+    border: 5px solid #00ff8c; /* Border color and thickness */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    font-family: 'kodo-reg'; /* Apply Kodo font */
+    font-size: 1.5em;
+    text-align: left;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+    margin-top: 10px; /* Space between info blocks */
+}
+
+.info-block i {
+    font-size: 2em; /* Size of the icon */
+    color: #00ff8c; /* Icon color */
+    margin-right: 15px; /* Space between icon and text */
+}
+/* Add this to your existing CSS file */
+
+.features-button {
+    display: inline-block;
+    background-color: #778231; /* Button color */
+    color: #ffffff; /* Text color */
+    padding: 10px 20px; /* Padding inside the button */
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* Remove underline */
+    font-family: 'kodo-bold', sans-serif; /* Font style */
+    font-size: 1.2em; /* Font size */
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
+    margin-top: 20px; /* Space above the button */
+}
+
+.features-button:hover {
+    background-color: #009e6c; /* Darker button color on hover */
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.features-button:active {
+    background-color: #007a52; /* Even darker color on click */
+    transform: scale(0.95); /* Slightly shrink on click */
 }
