@@ -1,60 +1,178 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bimble Lang</title>
-    <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <meta name="description"
+        content="Bimble Programming Language: A modern, fast, and intuitive programming language built on Rust.">
+    <title>The Bimble Language</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        
+
+        .shaking-window {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 300px;
+            height: 150px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: rgb(168, 153, 134);
+            color: blanchedalmond;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-size: 40px;
+            font-weight: bold;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            position: relative;
+            cursor: pointer;
+            text-decoration: none;
+            transition: transform 0.2s;
+            overflow: hidden;
+        }
+
+        .shaking-window:hover {
+            animation: shake 0.6s ease;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes shake {
+            0% {
+                transform: translateX(0);
+            }
+
+            25% {
+                transform: translateX(-10px);
+            }
+
+            50% {
+                transform: translateX(10px);
+            }
+
+            75% {
+                transform: translateX(-10px);
+            }
+
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+        .shaking-window a {
+            color: blanchedalmond;
+            text-decoration: none;
+        }
+
+        /* Ensure the features container is styled */
+        #features-container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background: rgba(60, 60, 60, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Download button styling */
+        .download-button {
+            display: inline-block;
+            padding: 15px 30px;
+            font-family: 'space-mono', sans-serif;
+            font-size: 1.2em;
+            font-weight: bold;
+            color: rgba(255, 255, 255, 0.9);
+            text-decoration: none;
+            background: linear-gradient(135deg, rgba(255, 87, 34, 1), rgba(255, 193, 7, 1));
+            border-radius: 25px;
+            box-shadow: 0 4px 10px rgba(255, 87, 34, 0.5);
+            transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+        }
+
+        .download-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 15px rgba(255, 87, 34, 0.7);
+        }
+
+        /* Version info styling */
+        .version-info {
+            font-size: 1.2em;
+            margin: 20px auto;
+            padding: 10px;
+            background: rgba(60, 60, 60, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+        }
+    </style>
 </head>
 
 <body>
-    <div class="container">
-        <div class="title-container">
-            <h1 class="maintitle">
-                The Bimble Programming Language<br>
-                <strong>
-                    <span class="version-warning">
-                        <i class="fas fa-exclamation-triangle"></i>
-                        Version 0.2 | V0.5 On The Way...
-                    </span>
-                </strong>
-            </h1>
-        </div>
-        <div class="info-block">
-            <i class="fas fa-cogs"></i>
-            <p class="info">Welcome to Bimble, the next-generation programming language designed to outshine Python in speed and reliability. Bimble offers a modern approach to coding with high-level constructs and static typing that ensures your code is not only efficient but also robust against runtime errors.</p>
-        </div>
-        <div class="info-block">
-            <i class="fas fa-cogs"></i>
-            <p class="info">What sets Bimble apart is its innovative error handling mechanism. Unlike traditional methods, Bimble integrates unique strategies to predict and manage errors before they disrupt your workflow. This allows for smoother development and more reliable applications.</p>
-        </div>
-        <div class="info-block">
-            <i class="fas fa-cogs"></i>
-            <p class="info">Designed with modern developers in mind, Bimble supports rapid development with its easy-to-use syntax while delivering the performance you need. Whether you're building complex systems or quick prototypes, Bimble adapts to your needs with powerful features and flexibility.</p>
-        </div>
-        <div class="info-block">
-            <i class="fas fa-cogs"></i>
-            <p class="info">Stay tuned as we roll out more features that will redefine programming. With each update, Bimble aims to bring more tools and enhancements to streamline your development process and push the boundaries of what you can achieve with code.</p>
-        </div>
-        <div class="sidebar" id="sidebar">
-            <h2>Explore</h2>
-            <a href="codes/features/features.html" class="clickable-item">Features</a>
-            <!-- Add more clickable items here -->
-        </div>
-        <div class="toggle-btn" id="toggle-btn">
-            <i class="fas fa-bars"></i>
-        </div>
-    </div>
-    <script>
-        const sidebar = document.getElementById('sidebar');
-        const toggleBtn = document.getElementById('toggle-btn');
+    <header class="main-header">
+        <h1 class="title">The Bimble Programming Language</h1>
+    </header>
+    <nav class="navbar">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="features.html" target="_blank">features</a></li>
+            <li><a href="info.html">info</a></li>
+            <li><a href="bimble-main.zip">download</a></li>
+        </ul>
+    </nav>
+    <main class="intro">
+        <section class="intro-text">
+            Welcome to Bimble—where innovation meets simplicity. Designed for the modern coder, Bimble transforms
+            programming into an intuitive and enjoyable experience. Our language leverages cutting-edge Rust technology
+            to deliver a solution that's as powerful as it is user-friendly.
+        </section>
+    </main>
 
-        toggleBtn.addEventListener('click', () => {
-            sidebar.classList.toggle('open');
-        });
-    </script>
+    <div class="version-info">
+        <span class="version-number">v0.2</span> <span class="info-text">—</span> <span class="next-version">v0.5</span>
+        <span class="info-text">coming soon!</span> <span class="info-text">— This version is in early alpha stage
+            and not yet ready for production use.</span>
+    </div>
+
+    <section class="example-section">
+        <div class="code-block">
+            <pre>
+<span class="comment"># Hello world!</span>
+<span class="keyword">echoln</span>(<span class="string">"Hello World!"</span>)
+<span class="comment">#variable</span>
+<span class="keyword">may</span> <span class="variable">hw</span> = <span class="number">0</span>
+<span class="keyword">echoln</span>(<span class="string">"I have $</span><span class="variable">hw</span><span class="string"> left today!"</span>)
+            </pre>
+        </div>
+        <h2 class="example-title">Example Code</h2>
+    </section>
+
+    <a href="https://github.com/vstartups/bimble" class="download-button" aria-label="Download Bimble">
+        Download
+    </a>
+
+    <a class='link' href='/codes/features/features' onmouseout='this.style.transform=\'scale(1)\'; this.style.boxShadow=\'0 4px 10px rgba(255, 87, 34, 0.5)\';' onmouseover='this.style.transform=\'scale(1.1)\'; this.style.boxShadow=\'0 6px 15px rgba(255, 87, 34, 0.7)\';' style='
+    display: inline-block;
+    padding: 15px 30px;
+    font-family: \'space-mono\', sans-serif;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+    background: linear-gradient(135deg, rgba(255, 87, 34, 1), rgba(255, 193, 7, 1));
+    border-radius: 25px;
+    box-shadow: 0 4px 10px rgba(255, 87, 34, 0.5);
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+'>
+        Discover Our Features!
+    </a>
+
 </body>
 
 </html>
