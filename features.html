@@ -1,0 +1,134 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="features.css">
+    <link rel="stylehseet" href="features.css">
+    <title>Features Block</title>
+</head>
+
+<body>
+    <header class="main-header">
+        <h1 class="title">The Bimble Programming Language</h1>
+    </header>
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#" target="_blank">features</a></li>
+            <li><a href="info.html">info</a></li>
+            <li><a href="bimble-main.zip">download</a></li>
+        </ul>
+    </nav>
+    <section class="features">
+        <h1 class="features-title">Features</h1>
+
+        <article class="feature-item">
+            <h2 class="feature-main-title">Advanced Error Management with Dot Functions</h2>
+            <p>
+                Bimble introduces an enhanced error management system through <strong>Dot Functions</strong>, a
+                sophisticated feature designed to ensure your application remains stable and resilient in the face of
+                unexpected conditions. By leveraging default values, Bimble can handle variables with unintentional values
+                gracefully, preventing runtime errors and improving overall program reliability.
+            </p>
+
+            <div class="feature-section">
+                <h3 class="feature-subtitle">1. DOT Defaults (DD.bb)</h3>
+                <p>
+                    The <strong>DOT Defaults</strong> file, named <strong>DD.bb</strong>, plays a crucial role in
+                    defining default values for variables. This file is essential for ensuring that variables are
+                    initialized with predefined values if they are not explicitly set during runtime. These defaults are
+                    integrated into the compiled executable, enabling robust error handling and reducing the likelihood
+                    of crashes.
+                </p>
+                <p>
+                    The syntax for specifying defaults in <strong>DD.bb</strong> is as follows:
+                </p>
+                <p class="code-sample">
+                    . varname : value
+                </p>
+                <p>
+                    In this context:
+                <ul>
+                    <li><strong>varname</strong> represents the variable for which the default value is being set.</li>
+                    <li><strong>value</strong> can be one of the following:
+                        <ul>
+                            <li>A basic value corresponding to the variable's type (e.g., <strong>0</strong> for
+                                integers, <strong>0.0</strong> for floating-point numbers, and an empty string for
+                                text).</li>
+                            <li>A function reference defined in the <strong>DOT Functions</strong> file, allowing for
+                                more complex or computed default values.</li>
+                        </ul>
+                    </li>
+                </ul>
+                </p>
+                <p>
+                    Example entry in the <strong>DD.bb</strong> file:
+                </p>
+                <p class="code-sample">
+                    . myVar : 10
+                </p>
+                <p>
+                    In this example, <strong>myVar</strong> is assigned a default value of <strong>10</strong>, which
+                    will be used if <strong>myVar</strong> is not initialized otherwise during execution.
+                </p>
+            </div>
+
+            <div class="feature-section">
+                <h3 class="feature-subtitle">2. DOT Functions (DFN.bb)</h3>
+                <p>
+                    The <strong>DOT Functions</strong> file, named <strong>DFN.bb</strong>, is used to define custom
+                    functions that can be utilized in the <strong>DOT Defaults</strong> file. These functions can
+                    compute or generate default values and perform specific actions necessary for complex default
+                    handling or error management.
+                </p>
+                <p>
+                    The syntax for defining a function in <strong>DFN.bb</strong> is:
+                </p>
+                <p class="code-sample">
+                    DFN funcname {<br>
+                    &nbsp;&nbsp;code<br>
+                    }
+                </p>
+                <p>
+                    In this file:
+                <ul>
+                    <li><strong>funcname</strong> is the identifier for the function being defined.</li>
+                    <li><strong>code</strong> represents the logic or operations performed by the function. This can
+                        include calculations, data transformations, or any other necessary logic.</li>
+                </ul>
+                </p>
+                <p>
+                    Example function in the <strong>DFN.bb</strong> file:
+                </p>
+                <p class="code-sample">
+                    DFN defaultInt {<br>
+                    &nbsp;&nbsp;. m_int : 10<br>
+                    &nbsp;&nbsp;. m_str : "string"<br>
+                    }
+                </p>
+                <p>
+                    In this example, the function <strong>defaultInt</strong> sets default values for an integer
+                    (<strong>m_int</strong>) and a string (<strong>m_str</strong>), which can then be used in the
+                    <strong>DOT Defaults</strong> file.
+                </p>
+            </div>
+
+            <div class="feature-section">
+                <h3 class="feature-subtitle">3. Error Notification</h3>
+                <p>
+                    When a variable lacks a specified default value in the <strong>DOT Defaults</strong> file, Bimble
+                    will provide an error notification. This notification alerts users to the missing default value,
+                    ensuring that all variables are initialized properly. This proactive approach facilitates effective
+                    error handling and enhances the stability of the application.
+                </p>
+            </div>
+        </article>
+
+    </section>
+
+</body>
+
+</html>
