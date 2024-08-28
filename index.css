@@ -241,11 +241,12 @@ main.intro {
     text-decoration: none;
     text-align: center;
     border-radius: 5px;
+    transition: font-size 0.3s ease;
 }
 .navbar a:hover {
     font-size: 120%;
-    transition: transform 0.2s;
 }
 .navbar li {
     float: left;
 }
+
